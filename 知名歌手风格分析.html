@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[网易云音乐知识图谱]</title>
+    <meta name="description" content="来自于山东大学三只松鼠的网易云音乐知识图谱">
+    <meta name="keywords" content="网易云，知识图谱，歌单，音乐">
+    <link rel="shortcut icon" href="./favicon.ico" type = "image/x-icon">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/知名歌手风格分析.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>[知名歌手风格分析]</h1>
+        <div class="show-time"></div>
+        <script>
+          var t = null;
+          t = setTimeout(time, 1000); //开始运行
+          function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".show-time").innerHTML =
+              "当前时间：" +
+              y +
+              "年" +
+              mt +
+              "月" +
+              day +
+              "日-" +
+              h +
+              "时" +
+              m +
+              "分" +
+              s +
+              "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+          }
+        </script>
+      </header>
+    <!-- 网站入口模块 -->
+    <div class="xtx-entry">
+        <div class="container">
+            <!-- 侧边栏 -->
+            <aside class="category">
+                <ul>
+                    <li><a href="张过年风格.html">张过年风格分析</a></li>
+                    <li><a href="薛之谦风格.html">薛之谦风格分析</a></li>
+                    <li><a href="陈奕迅风格.html">陈奕迅风格分析</a></li>
+                    <li><a href="TaylorSwift风格.html">TaylorSwift风格分析</a></li>
+                    <li><a href="四大音乐市场歌手tag略览.html">四大音乐市场歌手Tag分析</a></li>
+                    <li><a href="#">IKUN洗护</a></li>
+                    <li><a href="#">IKUN孕婴</a></li>
+                </ul>
+            </aside>
+        </div>
+        <div class = "JS">
+        </div>
+    </div>
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/newYork.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
